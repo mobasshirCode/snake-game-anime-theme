@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.body {
+  background: url("assets/background.jpg");
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#board {
+  width: 90vmin;
+  height: 92vmin;
+  border: 2px solid rgba(40, 107, 170, 0.24);
+  background: linear-gradient(rgba(6, 38, 145, 0.486), rgba(49, 4, 155, 0.459));
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+  z-index: 999;
+}
+
+#scorebox {
+  color: white;
+  font-weight: 900;
+  font-size: 55px;
+  position: absolute;
+  top: 20px;
+  right: 155px;
+}
+
+#level {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  width: 105px;
+  padding: 5px;
+  background-color: rgb(45, 202, 53);
+  border: 1px solid white;
+  border-radius: 15px;
+  position: absolute;
+  top: 100px;
+  right: 180px;
+  cursor: pointer;
+}
+
+#btn {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  width: 105px;
+  padding: 5px;
+  background-color: rgb(235, 36, 36);
+  border: 1px solid white;
+  border-radius: 15px;
+  position: absolute;
+  top: 150px;
+  right: 180px;
+  cursor: pointer;
+}
+
+.image img {
+  width: 20vw;
+  position: absolute;
+  top: 350px;
+  right: 140px;
+}
+
+.controls {
+  position: absolute;
+  background-color: blue;
+  width: 48px;
+  height: 42px;
+  display: none;
+}
+
+#up {
+  background: url("assets/u.png");
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  border-radius: 50%;
+  border: 0;
+  top: 75vh;
+}
+
+#left {
+  background: url("assets/l.png");
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  border-radius: 50%;
+  border: 0;
+  top: 81vh;
+  left: 25vw;
+}
+
+#down {
+  background: url("assets/d.png");
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  border-radius: 50%;
+  border: 0;
+  top: 83vh;
+}
+
+#right {
+  background: url("assets/r.png");
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  border-radius: 50%;
+  border: 0;
+  top: 81vh;
+  right: 25vw;
+}
+
+.head {
+  background: url(assets/images.png);
+  background-size: cover;
+  border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255);
+  transform: scale(1.15);
+}
+
+.snake {
+  background: linear-gradient(rgb(41, 112, 206), rgb(13, 63, 155));
+  border: 2px solid rgb(216, 248, 211);
+  border-radius: 15px;
+}
+
+.food {
+  background: url(assets/fruit.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+/* For smaller screens */
+@media screen and (max-width: 700px) {
+  #board {
+    width: 80vmin;
+    height: 80vmin;
+  }
+
+  #scorebox {
+    font-size: 40px;
+  }
+
+  #btn {
+    font-size: 13px;
+    padding: 5px;
+  }
+
+  .controls {
+    display: block;
+  }
+
+  #level {
+    font-size: 13px;
+    padding: 5px;
+  }
+
+  .image img {
+    width: 28vw;
+    top: 50px;
+    right: 70px;
+  }
+
+  .head {
+    transform: scale(1.25);
+  }
+
+  .snake {
+    border-radius: 8px;
+  }
+}
